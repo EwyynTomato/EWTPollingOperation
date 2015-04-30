@@ -1,0 +1,20 @@
+//
+//  ewtpollingoperationPrefix.pch
+//  EWTPollingOperationDemo
+//
+//  Created by EwyynTomato on 4/30/15.
+//  Copyright (c) 2015 ewyyntomato. All rights reserved.
+//
+
+#ifndef EWTPollingOperationDemo_ewtpollingoperationPrefix_pch
+#define EWTPollingOperationDemo_ewtpollingoperationPrefix_pch
+
+#define UIViewAutoresizingFlexibleMargins         \
+        UIViewAutoresizingFlexibleBottomMargin    | \
+        UIViewAutoresizingFlexibleLeftMargin      | \
+        UIViewAutoresizingFlexibleRightMargin     | \
+        UIViewAutoresizingFlexibleTopMargin       | \
+        UIViewAutoresizingFlexibleWidth           | \
+        UIViewAutoresizingFlexibleHeight
+
+#endif
