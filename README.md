@@ -22,18 +22,19 @@ pod 'EWTPollingOperation', :git => 'https://github.com/EwyynTomato/EWTPollingOpe
 - create and run polling operation
 
 ```objc
-EWTPollingOperation *operation = [EWTPollingOperation operationWithInterval:1 //call poll handler every 1 second
-                                                                withTimeout:5 //timeout in 5 seconds unless poll handler return YES to stop polling
-                                                            withPollHandler:^BOOL(id object) {
-                                                                //...do something...
-                                                                NSLog(@"[%@] called poll handler", object);
-                                                                
-                                                                //return NO if polling should keep going, YES to stop polling
-                                                                return NO;
-                                                            }
-                                                            withTimeoutHandler:^(id object) {
-                                                                //Handle timeout
-                                                            }];
+EWTPollingOperation *operation = [EWTPollingOperation
+                                    operationWithInterval:1 //call poll handler every 1 second
+                                    withTimeout:5 //timeout in 5 seconds unless poll handler return YES to stop polling
+                                    withPollHandler:^BOOL(id object) {
+                                        //...do something...
+                                        NSLog(@"[%@] called poll handler", object);
+                                    
+                                        //return NO if polling should keep going, YES to stop polling
+                                        return NO;
+                                    }
+                                    withTimeoutHandler:^(id object) {
+                                        //Handle timeout
+                                    }];
 
 [operation setObject:@{@"id":[NSNumber numberWithInt:i]}]; //Optional custom object to be passed on handlers
 [operation setStoppedHandler:^(id object) {
